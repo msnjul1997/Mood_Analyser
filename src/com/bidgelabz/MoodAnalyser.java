@@ -1,11 +1,27 @@
 package com.bidgelabz;
 
 public class MoodAnalyser {
-	  public String moodAnalyser(String message)
-	    {
-	            if (message.contains("Sad"))
-	                return "SAD";
+	private String message;
+    public MoodAnalyser(String message)
+    {
+        this.message = message;
+    }
+    public MoodAnalyser()
+    {
+        this.message = null;
+    }
+    public String moodAnalyser()
+    {
+        try {
+            if (this.message.contains("Sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        }
+        catch(NullPointerException e)
+        {
+            return "HAPPY";
+        }
+    }
 
-	            return "HAPPY";
-	    }
 }
