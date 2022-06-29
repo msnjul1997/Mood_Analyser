@@ -5,18 +5,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MoodAnalyserTest {
-	  MoodAnalyser object ;
-	    @BeforeEach
+	 MoodAnalyser object ;
+	    @Before
 	    public void setUp()
 	    {
-	    	 object = new MoodAnalyser();
+	        object = new MoodAnalyser();
 	    }
 	    @Test
 	    public void moodAnalyser()
-	    { 
-	    	//Test case 2.1:
-	        String ans = object.moodAnalyser();
-	        Assert.assertEquals("HAPPY",ans);
+	    {
+
+	        String ans = object.moodAnalyser("I am in Sad Mood");
+	        Assert.assertEquals("SAD",ans);
 	    }
 
 }
